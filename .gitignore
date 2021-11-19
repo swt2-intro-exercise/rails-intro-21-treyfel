@@ -17,3 +17,8 @@
 !/log/.keep
 /tmp
 /nbproject
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/rails-intro-21-treyfel.iml
+/.idea/vcs.xml
+/.idea/.gitignore
