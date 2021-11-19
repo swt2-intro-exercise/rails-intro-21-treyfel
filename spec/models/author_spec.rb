@@ -6,7 +6,7 @@ describe 'Author', type: :model do
     expect(author.homepage).to eq('https://wikipedia.org/Alan_Turing')
   end
 
-  it 'name should return the full name fo an author' do
+  it 'should have a function name return the full name fo an author' do
     expect(author.name).to eq('Alan Turing')
   end
 end
