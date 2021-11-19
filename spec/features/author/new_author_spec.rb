@@ -20,6 +20,5 @@ describe 'New authors page', type: :feature do
     page.fill_in 'author[homepage]', with: 'https://de.wikipedia.org/wiki/Edsger_W._Dijkstra'
     find('input[type="submit"]').click
 
-    expect(page).to have_field('author[first_name]')
   end
 end

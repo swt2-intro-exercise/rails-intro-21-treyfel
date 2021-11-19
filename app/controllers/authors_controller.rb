@@ -2,6 +2,10 @@
 
 class AuthorsController < ApplicationController
 
+  def new
+    @author = Author.new
+  end
+
   def show
     @author = Author.find(params[:id])
   end
@@ -13,7 +17,10 @@ class AuthorsController < ApplicationController
     redirect_to root_path, notice: 'Success!'
   end
 
+  private
   def author_params
-    params.require(:first_name).permit(:last_name, :homepage)
+    params.require(:author).permit(:first_name, :last_name, :homepage)
   end
+
+
 end
