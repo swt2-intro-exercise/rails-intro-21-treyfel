@@ -4,17 +4,17 @@
 <%= form_with first_name: :last_name, homepage: true do |form| %>
   <p>
     <%= form.label :first_name %><br>
-    <%= form.text_field :first_name %>
+    <%= form.text_field 'author[first_name]' %>
   </p>
 
   <p>
     <%= form.label :last_name %><br>
-    <%= form.text_field :last_name %>
+    <%= form.text_field 'author[last_name]' %>
   </p>
 
   <p>
     <%= form.label :homepage %><br>
-    <%= form.text_field :homepage%>
+    <%= form.text_field 'author[homepage]'%>
   </p>
 
 
