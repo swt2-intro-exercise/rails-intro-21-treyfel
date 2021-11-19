@@ -8,8 +8,8 @@ require 'rails_helper'
    it "should have an input field for new authors, asking for first name, last name and hoepage" do
      visit new_author_path
      # these are the standard names given to inputs by the Rails form builder
-     expect(page).to have_field('author[first_name]')
-     expect(page).to have_field('author[last_name]')
-     expect(page).to have_field('author[homepage]')
+     expect(page).to have_field('first_name')
+     expect(page).to have_field('last_name')
+     expect(page).to have_field('homepage')
    end
  end
