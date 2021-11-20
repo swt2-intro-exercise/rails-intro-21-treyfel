@@ -19,6 +19,10 @@ describe 'New authors page', type: :feature do
     page.fill_in 'author[last_name]', with: 'Dijkstra'
     page.fill_in 'author[homepage]', with: 'https://de.wikipedia.org/wiki/Edsger_W._Dijkstra'
     find('input[type="submit"]').click
+  end
 
+  it 'should fail when creating an author without a last name' do
+    @author = FactoryBot.create :author
+    expect(@author).to_not be_valid
   end
 end
