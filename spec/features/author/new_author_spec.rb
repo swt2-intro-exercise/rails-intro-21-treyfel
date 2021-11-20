@@ -22,7 +22,8 @@ describe 'New authors page', type: :feature do
   end
 
   it 'should fail when creating an author without a last name' do
-    @author = FactoryBot.create :author
-    expect(@author).to_not be_valid
+
+    author = Author.new(last_name: '')
+    expect(author).to_not be_valid
   end
 end
