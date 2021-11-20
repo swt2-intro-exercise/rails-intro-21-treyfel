@@ -18,7 +18,7 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
 
     if @author.save
-      attr_reader :edirect_to root_path, notice: 'Success!'
+      redirect_to root_path, notice: 'Success!'
     else
       render 'new'
     end
