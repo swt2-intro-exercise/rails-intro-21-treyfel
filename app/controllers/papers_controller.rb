@@ -17,6 +17,7 @@ class PapersController < ApplicationController
 
   # GET /papers/1/edit
   def edit
+    @paper = Paper.find(params[:id])
   end
 
   # POST /papers
@@ -47,12 +48,12 @@ class PapersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_paper
-      @paper = Paper.find(params[:id])
-    end
+  def set_paper
+    @paper = Paper.find(params[:id])
+  end
 
     # Only allow a trusted parameter "white list" through.
-    def paper_params
-      params.require(:paper).permit(:title, :venue, :year)
-    end
+  def paper_params
+    params.require(:paper).permit(:title, :venue, :year, :author_ids => [])
+  end
 end
