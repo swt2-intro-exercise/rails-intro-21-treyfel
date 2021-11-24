@@ -10,6 +10,10 @@ class AuthorsController < ApplicationController
     @author = Author.new
   end
 
+  def edit
+    @author = Author.find(params[:id])
+  end
+
   def show
     @author = Author.find(params[:id])
   end
@@ -21,6 +25,16 @@ class AuthorsController < ApplicationController
       redirect_to root_path, notice: 'Success!'
     else
       render 'new'
+    end
+  end
+
+  def update
+    @author = Author.find author_params
+
+    if @author.update(author_params)
+      redirect_to @author
+    else
+      render 'edit'
     end
   end
 
