@@ -9,6 +9,7 @@ describe 'Author index page', type: :feature do
     expect(page).to have_link 'New', href: new_author_path
   end
   it 'should have delete buttons' do
+    author = create :author
     visit authors_url
     expect(page).to have_link 'Delete'
   end
