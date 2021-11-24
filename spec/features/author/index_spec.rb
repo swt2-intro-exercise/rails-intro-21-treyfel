@@ -8,4 +8,8 @@ describe 'Author index page', type: :feature do
     expect(page).to have_text 'Homepage'
     expect(page).to have_link 'New', href: new_author_path
   end
+  it 'should have delete buttons' do
+    visit authors_url
+    expect(page).to have_link 'Delete'
+  end
 end
