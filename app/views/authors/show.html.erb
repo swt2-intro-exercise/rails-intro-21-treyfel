@@ -1,0 +1,13 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Homepage:</strong>
+  <%= @author.homepage%>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', author_path %>
